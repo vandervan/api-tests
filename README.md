@@ -1,2 +1,2 @@
 # api-tests
-API testing with Rest-assured
+API testing with MochaJS + Typescript
