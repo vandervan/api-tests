@@ -1,6 +1,6 @@
 import { strict as assert } from "assert";
 import { definitions } from "../.temp/types";
-import {ApiClient} from "../api/client";
+import { ApiClient } from "../api/client";
 
 
 describe('Pet', function () {
