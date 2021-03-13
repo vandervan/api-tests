@@ -1,7 +1,7 @@
-import {JsonRequest} from "http-req-builder";
-import {ResponseValidator} from "response-openapi-validator";
+import { JsonRequest } from "http-req-builder";
+import { ResponseValidator } from "response-openapi-validator";
 
-const responseValidator = new ResponseValidator({
+const responseValidator = new ResponseValidator ({
     openApiSpecPath: 'http://93.126.97.71:10080/api/swagger.json',
     apiPathPrefix: '/api',
     ajvOptions: {
