@@ -37,21 +37,21 @@ describe('Pet', function () {
     })
     it('can be added, deleted or updated', async function (){
         const petToCreate: Omit<definitions['Pet'], 'id'> =  {
-            "category": {
-                "id": 0,
-                "name": "string"
+            category: {
+                id: 0,
+                name: "string"
             },
-            "name": "Cat",
-            "photoUrls": [
+            name: "Cat",
+            photoUrls: [
                 "http://test.com/image.jpg"
             ],
-            "tags": [
+            tags: [
                 {
                     "id": 0,
                     "name": "string"
                 }
             ],
-            "status": "available"
+            status: "available"
         }
         const addedPet = await pet.addNew(petToCreate)
         assert.deepEqual(addedPet, {
@@ -65,22 +65,22 @@ describe('Pet', function () {
         }, `Expected found pet to match created pet`)
 
         const newerPet: definitions['Pet'] = {
-            "id": addedPet.id,
-            "category": {
+            id: addedPet.id,
+            category: {
                 "id": 1,
                 "name": "string2"
             },
-            "name": "Dog",
-            "photoUrls": [
+            name: "Dog",
+            photoUrls: [
                 "http://test.com/image2.jpg"
             ],
-            "tags": [
+            tags: [
                 {
                     "id": 1,
                     "name": "string2"
                 }
             ],
-            "status": "pending"
+            status: "pending"
         }
         const updatedPet = await pet.update(newerPet)
         assert.deepEqual(updatedPet, newerPet, `Expected updated pet to equal data used upon updating`)
