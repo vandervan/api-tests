@@ -35,6 +35,7 @@ describe('Pet', function () {
                 ), 'Every returned pet must contain tag1'
             )
     })
+
     it('can be added, deleted or updated', async function (){
         const petToCreate: Omit<definitions['Pet'], 'id'> =  {
             category: {
@@ -58,6 +59,7 @@ describe('Pet', function () {
             ...petToCreate,
             id: addedPet.id
         }, `Expected created pet to match data used upon creation`)
+
         const foundAddedPet = await pet.getById(addedPet.id)
         assert.deepEqual(foundAddedPet, {
             ...petToCreate,
