@@ -1,4 +1,4 @@
-import {JsonRequest} from "../request";
+import {JsonRequest} from "http-req-builder";
 import {operations} from "../../.temp/types";
 
 export class StoreController {

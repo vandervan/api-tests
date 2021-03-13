@@ -1,5 +1,5 @@
 import {URLSearchParams} from "url";
-import {JsonRequest} from "../request";
+import {JsonRequest} from "http-req-builder";
 import {definitions, operations} from "../../.temp/types";
 
 export class PetController {
